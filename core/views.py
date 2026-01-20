@@ -12,3 +12,6 @@ def onepage(request):
 
 def derick(request):
     return render(request, "core/derick.html")
+
+def cvjona(request):
+    return render(request, "core/cvjona.html")
