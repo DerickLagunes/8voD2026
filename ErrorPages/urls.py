@@ -1,0 +1,11 @@
+from django.urls import path
+
+from core import views as core
+
+urlpatterns = [
+   #path para la página raiz == index = home == inicio
+   path('', core.index, name='index'),
+   path('contacto/', core.contacto, name='contacto'),
+   path('onepage/', core.onepage, name='onepage'),
+   
+]
