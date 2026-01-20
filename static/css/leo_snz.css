@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+:root {
+    --primario: #122E4F;
+    --secundario: #4073AF;
+    --terciario: #DBE2EF;
+    --cuaternario: #F9F7F7;
+}
+
+html,
+body {
+    overscroll-behavior: none;
+    font-family: "Quattrocento", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oswald", sans-serif;
+    color: var(--primario);
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+#leo_main {
+    display: grid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    grid-template-areas:
+        "aside section section"
+        "aside article article";
+    grid-template-columns: minmax(250px, 15%) 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+@media (max-width: 600px) {
+    #leo_main {
+        grid-template-areas:
+            "aside"
+            "section"
+            "article";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    #leo_header {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) {
+    #leo_main {
+        height: 100dvh !important;
+    }
+}
+
+#leo_header {
+    grid-area: header;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+
+#leo_aside {
+    grid-area: aside;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+
+#leo_section {
+    grid-area: section;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+
+#leo_article {
+    grid-area: article;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    overflow: auto;
+}
+
+#leo_footer {
+    grid-area: footer;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+}
+
+#leo_header {
+    background-color: var(--terciario);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#leo_nav {
+    background-color: #333;
+}
+
+#leo_aside {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primario);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.25em !important;
+}
+
+#perfil_foto {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#leo_section {
+    background-color: var(--cuaternario);
+    width: 100%;
+    height: 100%;
+}
+
+#leo_article {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+#leo_footer {
+    background-color: var(--secundario);
+    width: 100%;
+    height: auto;
+}
+
+.blur_sqare {
+    width: 100%;
+    height: fit-content;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    backdrop-filter: blur(4px);
+    box-sizing: border-box;
+}
+
+.blur_sqare span {
+    color: white;
+    font-size: .75rem;
+}
+
+.blur_sqare p {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.side_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 2px;
+}
+
+.side_content h4 {
+    color: white;
+    margin: 0;
+}
+
+.lang_div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.lang_div span {
+    color: white;
+}
+
+.lng {
+    color: var(--terciario) !important;
+    font-weight: bold;
+}
+
+.card_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.knowledge_card {
+    width: max(300px, 25%);
+    height: 175px;
+    background-color: var(--terciario);
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.knowledge_card h3 {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.knowledge_card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
