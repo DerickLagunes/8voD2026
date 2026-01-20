@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Mi CV{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/leo_snz.css' %}" />
+{% endblock %}
+{% block scripts %}{% endblock %}
+{% block favicon %}
+<link rel="icon" type="image/x-icon" href="{% static 'favicon/leo/favicon.ico'%}">
+{% endblock %}
+
+{% block contenido %}
+<main id="leo_main">
+    <aside id="leo_aside">
+        <div class="blur_sqare">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.6dJmz7pr8HIRIhRgGGJNNAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="mi_foto" id="perfil_foto" loading="lazy">
+            <p>Leonardo Sanchez</p>
+            <span>Full-stack developer</span>
+            <span>UI/UX designer</span>
+        </div>
+
+        <article class="side_content">
+            <h4>Lenguajes de programación</h6>
+                <nav>
+                    <div class="lang_div"><span>Java</span><span class="lng">Alto</span></div>
+                    <div class="lang_div"><span>Javascript</span><span class="lng">Alto</span></div>
+                    <div class="lang_div"><span>Python</span><span class="lng">Medio</span></div>
+                    <div class="lang_div"><span>Kotlin</span><span class="lng">Medio</span></div>
+                    <div class="lang_div"><span>Typescript</span><span class="lng">Bajo</span></div>
+                    <div class="lang_div"><span>C++</span><span class="lng">Bajo</span></div>
+                </nav>
+        </article>
+
+        <article class="side_content">
+            <h4>Idiomas que hablo</h6>
+                <nav>
+                    <div class="lang_div"><span>Español</span><span class="lng">Nativo</span></div>
+                    <div class="lang_div"><span>Inglés</span><span class="lng">B2</span></div>
+                    <div class="lang_div"><span>Japonpés</span><span class="lng">A2</span></div>
+                </nav>
+        </article>
+    </aside>
+    <section id="leo_section">
+        <h2>Sobre mi</h2>
+        <p style="text-align: justify;">Soy desarrollador full-stack, estudiante de Ingeniería en desarrollo y gestión
+            de software, con
+            experiencia
+            en Java, Spring Boot, JavaScript, Node.js y React. También tengo conocimientos en diseño UI/UX.
+            Desarrollo aplicaciones web con React, y móviles tanto nativas (Android con Kotlin) como hibridas (React
+            Native).
+            En el backend, me especializo en la creación de APIs RESTful y aplicaciones en tiempo real utilizando
+            websockets con Socket.io en Node.js.
+            Además, cuento con experiencia en bases de datos SQL y NoSQL, y despliegue de aplicaciones en AWS.
+        </p>
+    </section>
+    <article id="leo_article">
+        <h2>Mis habilidades</h2>
+        <div class="card_container">
+            <div class="knowledge_card">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>React.js</li>
+                    <li>React Native</li>
+                    <li>Bootstrap</li>
+                    <li>Material design</li>
+                </ul>
+            </div>
+            <div class="knowledge_card">
+                <h3>Backend</h3>
+                <ul>
+                    <li>Spring Boot</li>
+                    <li>Node.js</li>
+                    <li>Flask</li>
+                    <li>Express.js</li>
+                    <li>Socket.io</li>
+                    <li>RESTful APIs</li>
+                </ul>
+            </div>
+            <div class="knowledge_card">
+                <h3>Base de datos</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>SQLite</li>
+                </ul>
+            </div>
+            <div class="knowledge_card">
+                <h3>Diseño UI/UX</h3>
+                <ul>
+                    <li>Figma</li>
+                    <li>Principles of Design</li>
+                </ul>
+            </div>
+            <div class="knowledge_card">
+                <h3>Otros</h3>
+                <ul>
+                    <li>AWS</li>
+                    <li>Git</li>
+                    <li>Arduino</li>
+                    <li>Github</li>
+                    <li>Virtual Box</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</main>
+{% endblock %}
