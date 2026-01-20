@@ -12,3 +12,6 @@ def onepage(request):
 
 def derick(request):
     return render(request, "core/derick.html")
+
+def jesus(request):
+    return render(request, "core/jesus.html")
