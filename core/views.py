@@ -9,3 +9,6 @@ def contacto(request):
 
 def onepage(request):
     return render(request, "core/onepage.html")
+
+def derick(request):
+    return render(request, "core/derick.html")
