@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% block titulo %}CV Francisco Armando Fuentes
+Sandoval {% endblock %} {% block contenido %}
+
+<style>
+  body {
+    background-color: #100d56;
+    margin: 20px auto;
+  }
+  section {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .habilidades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  p,
+  li {
+    color: rgb(250, 214, 220);
+    text-align: justify;
+  }
+  h2 {
+    color: orange;
+    text-align: left;
+  }
+</style>
+<div>
+  <section>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYL3xrZPIeNt4yl-leIxdL9s2nXCLS3jsWQ&s"
+      alt="Imagen de la persona del CV"
+    />
+  </section>
+
+  <section>
+    <h2>Datos personales</h2>
+    <p><strong>Nombre:</strong> Francisco Armando Fuentes Sandoval</p>
+    <p><strong>Edad:</strong> 20</p>
+    <p><strong>Sexo:</strong> Masculino</p>
+  </section>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p class="centrado">
+      Soy un estudiante de Desarrollo de Software con una fuerte pasión por el
+      desarrollo backend. Aspiro a adquirir experiencia en soluciones
+      eficientes; mi objetivo es seguir aprendiendo y desarrollarme
+      profesionalmente en empresas tecnológicas donde pueda aplicar mis
+      conocimientos en programación y bases de datos.
+    </p>
+  </section>
+
+  <section class="habilidades">
+    <section>
+      <h2>Habilidades Técnicas</h2>
+      <ul>
+        <li>Desarrollo Front (HTML5, CSS, React)</li>
+        <li>Desarrollo Back (SpringBoot, NodeJs)</li>
+        <li>Desarrollo móvil (React Native, Kotlin)</li>
+        <li>Bases de datos (MySQL, MongoDB)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Habilidades Blandas</h2>
+      <ul>
+        <li>Desarrollo Front (HTML5, CSS, React)</li>
+        <li>Desarrollo Back (SpringBoot, NodeJs)</li>
+        <li>Desarrollo móvil (React Native, Kotlin)</li>
+        <li>Bases de datos (MySQL, MongoDB)</li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+{% endblock %}
