@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Nadia Yuridia Salinas Cervantes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #ffffff;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .cv {
+      max-width: 100%;
+      margin: 0;
+      background: #ffffff;
+    }
+    
+    /* Header */
+    .header {
+      padding: 60px 80px 50px;
+      border-bottom: 1px solid #e5e5e5;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .header-text h1 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+    .header-text .subtitle {
+      font-size: 15px;
+      color: #666;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #555;
+    }
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #f5f5f5;
+      flex-shrink: 0;
+    }
+
+    /* Main Content */
+    .content {
+      padding: 50px 80px 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .section {
+      margin-bottom: 35px;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 2px;
+      background: #1a1a1a;
+    }
+    
+    .section p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* Experience & Education */
+    .experience-item {
+      margin-bottom: 24px;
+    }
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+    .job-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    .date {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .experience-item ul {
+      margin-left: 20px;
+      margin-top: 8px;
+    }
+    .experience-item li {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 18px;
+    }
+    .skill-category h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      font-size: 12px;
+      color: #555;
+      background: #f5f5f5;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 500;
+      border: 1px solid #ebebeb;
+    }
+    
+    .simple-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .simple-list li {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .simple-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 20px 10px; }
+      .header, .content { padding: 30px 25px; }
+      .header-content { flex-direction: column-reverse; align-items: center; text-align: center; }
+      .contact-info { justify-content: center; }
+      h2::after { left: 50%; transform: translateX(-50%); }
+      .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-text">
+          <h1>Nadia Yuridia Salinas Cervantes</h1>
+          <p class="subtitle">Desarrolladora de Software</p>
+          <div class="contact-info">
+            <span>📞 777 502 5027</span>
+            <span>✉️ yuridiasalinas05@gmail.com</span>
+            <span>📍 Emiliano Zapata, Morelos</span>
+          </div>
+        </div>
+        <img src="https://i.pinimg.com/736x/bc/6e/01/bc6e011fdcff6f03977c13e0db1ce6c3.jpg" alt="Nadia Salinas" class="photo" />
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Perfil -->
+      <section class="section">
+        <h2>Perfil</h2>
+        <p>Profesional egresada de la UTEZ como Técnica Superior Universitaria en Desarrollo y Gestión de Software, con experiencia en el desarrollo de sistemas web y móviles orientados a la gestión empresarial. Destaco por mi adaptabilidad, compromiso con la calidad y trabajo en equipo.</p>
+      </section>
+
+      <!-- Habilidades -->
+      <section class="section">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Técnicas</h3>
+            <div class="skill-list">
+              <span class="tag">Java</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">React</span>
+              <span class="tag">React Native</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Git</span>
+              <span class="tag">API REST</span>
+              <span class="tag">JWT</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Profesionales</h3>
+            <ul class="simple-list">
+              <li>Trabajo en equipo</li>
+              <li>Comunicación efectiva</li>
+              <li>Pensamiento crítico</li>
+              <li>Liderazgo</li>
+              <li>Gestión del tiempo</li>
+              <li>Aprendizaje continuo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia -->
+      <section class="section">
+        <h2>Experiencia</h2>
+        
+        <div class="experience-item">
+          <p class="job-title">GIUP – Sistema de Gestión para Cafeterías</p>
+          <p class="date">Septiembre 2024 – Diciembre 2024</p>
+          <ul>
+            <li>Desarrollo de sistema de usuarios, productos y ventas con React, Spring Boot y MySQL</li>
+            <li>Implementación de autenticación y control de roles</li>
+            <li>Optimización del flujo de ventas y seguridad del sistema</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <p class="job-title">SIRGEP – Sistema de Gestión de Restaurantes</p>
+          <p class="date">Enero 2025 – Abril 2025</p>
+          <ul>
+            <li>Sistema de pedidos, ventas e inventarios</li>
+            <li>Panel administrativo con control de roles y JWT</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <p class="job-title">SIGMEX – Sistema de Mantenimiento de Extintores</p>
+          <p class="date">Mayo 2025 – Septiembre 2025</p>
+          <ul>
+            <li>Módulo de gestión de equipos y reportes</li>
+            <li>Integración con base de datos MySQL</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Educación -->
+      <section class="section">
+        <h2>Educación</h2>
+        
+        <div class="experience-item">
+          <p class="job-title">Técnica Superior Universitaria en Desarrollo y Gestión de Software</p>
+          <p class="date">Universidad Tecnológica Emiliano Zapata (UTEZ) | 2023 – Actualidad</p>
+        </div>
+
+        <div class="experience-item">
+          <p class="job-title">Técnico en Programación</p>
+          <p class="date">CECyTE Morelos | 2020 – 2023</p>
+        </div>
+      </section>
+
+      <!-- Idiomas -->
+      <section class="section">
+        <h2>Idiomas</h2>
+        <ul class="simple-list">
+          <li>Español — Nativo</li>
+          <li>Inglés — Básico (A1+)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
