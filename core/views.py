@@ -14,3 +14,6 @@ def derick(request):
     return render(request, "core/derick.html")
 def OscarMontesCV(request):
     return render(request,"core/OscarMontesCV.html")
+
+def cvjona(request):
+    return render(request, "core/cvjona.html")
