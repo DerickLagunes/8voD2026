@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+CV - Martin Jimenez
+{% endblock %}
+
+{% block contenido %}
+
+<style>
+  .skill {
+    background: #34495e;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  .h2-section {
+    color: #2c3e50;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 25px;
+  }
+</style>
+
+<div style="
+  background: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+">
+
+  <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+
+    <div style="
+      background: #2c3e50;
+      color: #fff;
+      padding: 30px;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    ">
+      <img
+        src="https://i.pinimg.com/originals/97/7f/af/977faf2b79a26e4a1984ef4f55dad8a0.jpg"
+        alt="Martin Jimenez"
+        style="
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        "
+      />
+      <div>
+        <h1 style="font-size: 1.8rem; margin: 0 0 8px">
+          Martin Alejandro Jimenez Lorenzo
+        </h1>
+        <p style="color: #ecf0f1; margin: 0 0 15px">
+          Desarrollador de Software
+        </p>
+        <div style="font-size: 0.9rem; color: #bdc3c7">
+          📧 alex@gmail.com | 📱 (563) 496-1415 | 📍 Jiutepec, Morelos
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="h2-section" style="margin-top: 0">Educación</h2>
+      <p style="color: #555; margin: 15px 0 5px">
+        • Técnico Superior Universitario en Tecnologías de la Información - UTEZ | 2023 - 2025
+      </p>
+      <p style="color: #555; margin: 5px 0 15px">
+        • Ingeniero en Desarrollo y Gestión de Software - UTEZ | 2025 - Presente
+      </p>
+
+      <h2 class="h2-section" style="margin-top: 0">Cursos</h2>
+        <p style="color: #555; margin: 15px 0">
+            • Desarrollo Web con HTML, CSS y JavaScript - Platzi | 2024<br>
+            • Introducción a React - Coursera | 2024<br>
+            • Fundamentos de Spring Boot - Udemy | 2025
+        </p>
+
+      <h2 class="h2-section">Experiencia</h2>
+      <p style="color: #555; margin: 15px 0">
+        <strong>Practicante en Desarrollo de Software</strong><br>
+        ProSolutions One | 2025 - 2026
+      </p>
+
+      <h2 class="h2-section">Habilidades</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Spring</span>
+        <span class="skill">Git</span>
+      </div>
+
+      <h2 class="h2-section">Idiomas</h2>
+        <p style="color: #555; margin: 15px 0">
+            • Español - Nativo<br>
+            • Inglés - Intermedio
+        </p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
