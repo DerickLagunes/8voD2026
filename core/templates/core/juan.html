@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block titulo %} CV {% endblock %}
+
+{% block contenido %}
+
+<div class="container my-5 text-white">
+    <div class="text-center mb-4">
+        <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrLJikHHr2xE1uFpvYwN77rW_P-GtX3BV1XQ&s"
+            alt="perfil"
+            width="100"
+            class="rounded-circle shadow mb-3"
+        >
+        <h1 class="fw-bold text-white">Juan Pablo</h1>
+        <p class="mb-0 text-white">Desarrollador de Software</p>
+    </div>
+
+    <hr>
+
+    <section class="mb-4">
+        <h5 class="fw-bold text-white">Perfil Profesional</h5>
+        <p class="text-white">
+            Estudiante de ingeniería enfocado en el desarrollo de aplicaciones web y sistemas multiplataforma,
+            con experiencia en backend, frontend, bases de datos y consumo de APIs RESTful.
+        </p>
+    </section>
+
+    <section class="mb-4">
+        <h5 class="fw-bold text-white">Habilidades Técnicas</h5>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="text-white">
+                    <li>Java, Python, JavaScript</li>
+                    <li>Django (básico), Spring Boot, Node.js</li>
+                    <li>APIs RESTful</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="text-white">
+                    <li>React, Vue, Bootstrap</li>
+                    <li>MySQL, MongoDB</li>
+                    <li>AWS (básico)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-4">
+        <h5 class="fw-bold text-white">Diseño y UX</h5>
+        <ul class="text-white">
+            <li>Diseño UX/UI</li>
+            <li>Principios de usabilidad</li>
+            <li>Interfaces responsivas</li>
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h5 class="fw-bold text-white">Formación Académica</h5>
+        <p class="mb-2 text-white">
+            <strong>Tecnologías de la Información – Desarrollo de Software Multiplataforma</strong><br>
+            Universidad Tecnológica No. 41<br>
+            <span class="text-white">Septiembre 2023 – Agosto 2025</span>
+        </p>
+
+        <p class="text-white">
+            <strong>Ingeniería en Desarrollo y Gestión de Software</strong><br>
+            Universidad Tecnológica No. 27<br>
+            <span class="text-white">Septiembre 2025 – En curso</span>
+        </p>
+    </section>
+
+    <section>
+        <h5 class="fw-bold text-white">Competencias</h5>
+        <ul class="text-white">
+            <li>Resolución de problemas</li>
+            <li>Pensamiento lógico</li>
+            <li>Trabajo en equipo</li>
+            <li>Aprendizaje continuo</li>
+        </ul>
+    </section>
+
+</div>
+
+{% endblock %}
