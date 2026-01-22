@@ -13,6 +13,8 @@ def onepage(request):
 def derick(request):
     return render(request, "core/derick.html")
 
+def ruben(request):
+    return render(request, "core/ruben.html")
 def alexandro(request):
     return render(request, 'core/alexandro.html')
 def OscarMontesCV(request):
