@@ -8,4 +8,6 @@ urlpatterns = [
    path('contacto/', core.contacto, name='contacto'),
    path('onepage/', core.onepage, name='onepage'),
    path('derick/', core.derick, name='derick'),
+  path('cvfredy/', core.cvfredy, name='fredy'),
+
 ]
