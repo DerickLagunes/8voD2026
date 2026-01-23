@@ -15,3 +15,12 @@ def derick(request):
 
 def hanna(request):
     return render(request, "core/hanna.html")
+def ruben(request):
+    return render(request, "core/ruben.html")
+def alexandro(request):
+    return render(request, 'core/alexandro.html')
+def OscarMontesCV(request):
+    return render(request,"core/OscarMontesCV.html")
+
+def cvjona(request):
+    return render(request, "core/cvjona.html")
