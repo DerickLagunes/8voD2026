@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Hanna</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cv {
+            width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .datos {
+            margin-bottom: 20px;
+        }
+
+        .datos p {
+            margin: 3px 0;
+        }
+
+        .seccion {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv">
+        <!-- Imagen de perfil -->
+<img src="{% static 'img/perfil.jpg' %}" alt="Foto de perfil" width="150">
+
+        <!-- Datos personales -->
+        <h1>Hanna Romybsi Perez Caspeta</h1>
+        <p><strong>Sexo:</strong> Femenino</p>
+        <p><strong>Edad:</strong> 20</p>
+        <p><strong>Estudiante en Ingenieria en Desarrollo de Software</strong></p>
+
+        <!-- Perfil -->
+        <div class="seccion">
+            <h2>Perfil</h2>
+            <p>
+                Estudiante responsable y organizada, con interés en el área de
+                [programación.
+                Me gusta aprender cosas nuevas y trabajar en equipo.
+            </p>
+        </div>
+
+        <!-- Educación -->
+        <div class="seccion">
+            <h2>Educación</h2>
+            <p><strong>Universidad Tecnológica de Emiliano Zapata</strong></p>
+            <p>Ingeniería en Desarrollo de Software – 2020 - Actualidad</p>
+        </div>
+
+        <!-- Habilidades -->
+        <div class="seccion">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML y CSS básico</li>
+                <li>Bases de datos</li>
+                <li>Trabajo en equipo</li>
+                <li>Responsabilidad</li>
+            </ul>
+        </div>
+
+        <!-- Idiomas -->
+        <div class="seccion">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Inglés – Básico (A2)</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
