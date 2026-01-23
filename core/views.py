@@ -22,3 +22,6 @@ def OscarMontesCV(request):
 
 def cvjona(request):
     return render(request, "core/cvjona.html")
+
+def cisco(request):
+    return render(request, "core/cisco.html")
