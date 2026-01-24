@@ -25,3 +25,6 @@ def cvjona(request):
 
 def cisco(request):
     return render(request, "core/cisco.html")
+
+def cv(request):
+    return render(request, "core/cv.html")

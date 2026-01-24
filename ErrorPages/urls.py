@@ -13,4 +13,5 @@ urlpatterns = [
    path('OscarMontesCV', core.OscarMontesCV, name='OscarMontesCV'),
    path('cvjona/', core.cvjona, name='cvjona'),
    path('cisco/', core.cisco, name='cisco'),
+   path('luis-ricardo-medina-villagomez', core.cv, name='cv'),
 ]
