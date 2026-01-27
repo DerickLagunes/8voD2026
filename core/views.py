@@ -28,3 +28,6 @@ def cisco(request):
 
 def cv(request):
     return render(request, "core/cv.html")
+
+def Alison(request):
+    return render(request, "core/Alison.html")
