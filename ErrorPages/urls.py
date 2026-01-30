@@ -10,7 +10,10 @@ urlpatterns = [
    path('derick/', core.derick, name='derick'),
    path('ruben/', core.ruben, name='ruben'),
    path('alexandro', core.alexandro, name='alexandro'),
-    path('OscarMontesCV', core.OscarMontesCV, name='OscarMontesCV'),
+   path('OscarMontesCV', core.OscarMontesCV, name='OscarMontesCV'),
    path('cvjona/', core.cvjona, name='cvjona'),
    path('formulario/', core.contacto_view, name='formulario'),
+   path('cisco/', core.cisco, name='cisco'),
+   path('luis-ricardo-medina-villagomez', core.cv, name='cv'),
+   path('Alison/', core.Alison, name='Alison'),
 ]
