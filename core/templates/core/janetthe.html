@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}CV Janetthe{% endblock %}
+
+{% block contenido %}
+<style>
+    .cv {max-width: 800px; margin: 30px auto; display: flex; gap: 30px;}
+    .info {flex: 1;}
+    .foto {width: 180px;}
+    .foto img {width: 100%; border-radius: 10px;}
+    @media (max-width: 768px) {.cv {flex-direction: column;} .foto {width: 100%; text-align: center;}}
+</style>
+
+<div class="cv">
+    <div class="info">
+        <h1>Janetthe Millán</h1>
+        <p><strong>Desarrolladora de Software</strong></p>
+        
+        <p><strong>Edad:</strong> 21 años</p>
+        <p><strong>Sexo:</strong> Femenino</p>
+        
+        <p>Soy desarrolladora de software apasionada por crear soluciones innovadoras. 
+           Especializada en aplicaciones web y móviles.</p>
+        <p>Mi objetivo es transformar ideas en productos funcionales.</p>
+    </div>
+    
+    <div class="foto">
+        <img src="https://thumbs.dreamstime.com/b/un-panda-vistiendo-traje-generado-por-ai-275022962.jpg" alt="Janetthe">
+    </div>
+</div>
+{% endblock %}
+
+{% block mensaje %}
+<div style="background: white; padding: 20px; margin-top: 30px; text-align: center; border-top: 1px solid #eee;">
+    <p>Pra contrataciones escribe a Yanuela@gmail.com</p>
+    <p><a href="/">← Regresar al inicio</a></p>
+</div>
+{% endblock %}
