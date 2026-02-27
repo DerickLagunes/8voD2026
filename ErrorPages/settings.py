@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+    'registro',
+    'error_reports',
+    'mascota_api',
+    'rest_framework',
+    'libro_rest',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +80,16 @@ WSGI_APPLICATION = 'ErrorPages.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'libros_db',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
+
 
 
 # Password validation

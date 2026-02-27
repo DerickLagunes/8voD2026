@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+ {% block contenido %}
+<h1>Reporte de error</h1>
+<p>Rellena el siguiente formulario para reportar un error.</p>
+<form id="formulario_reportes" method="post">
+  {% csrf_token %} {% for field in form %}
+  <div class="mb-3">
+    <label>{{ field.label }}</label> <br />
+    {{ field }} {% if field.errors %}
+    <div style="color: red">{{ field.errors|striptags }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+<div id="mensaje"></div>
+{% if success %}
+<p style="color: green">¡Reporte enviado correctamente!</p>
+{% endif %}
+
+<h1>Reportes de error registrados</h1>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Método</th>
+      <th>URL</th>
+      <th>IP</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody id="tablaReportes"></tbody>
+</table>
+
+<script>
+  const form = document.getElementById('formulario_reportes');
+  const mensaje = document.getElementById('mensaje');
+  // Función para cargar los reportes desde el servidor
+  async function cargarReportes(){
+      try{
+          // Realiza una petición GET para obtener los reportes
+          const response = await fetch("/obtener-reportes/",{
+              method: "GET",
+              headers:{
+                  "X-Requested-With": "XMLHttpRequest", // Indica que es una petición AJAX
+              }
+          });
+          const data = await response.json(); //espera la respuesta y la convierte a JSON
+          const tablaReportes = document.getElementById("tablaReportes");
+          tablaReportes.innerHTML = ""; // Limpia la tabla antes de llenarla
+          data.forEach(reporte => {
+              let clase_error = "";
+              //pasarlo a texto
+              const tipo = String(reporte.tipo_error || "");
+              if(tipo.startsWith("4")){
+                  clase_error = "table-warning"; // Error del cliente
+              }
+              if(tipo.startsWith("5")){
+                  clase_error = "table-danger"; // Error del servidor
+              }
+
+              const fila = `
+                  <tr class="${clase_error}">
+                      <td>${reporte.titulo}</td>
+                      <td>${reporte.descripcion}</td>
+                      <td>${reporte.tipo_error}</td>
+                      <td>${reporte.metodo_http}</td>
+                      <td>${reporte.url}</td>
+                      <td>${reporte.ip_cliente ?? ""}</td>
+                      <td>${new Date(reporte.fecha_reporte).toLocaleString()}</td>
+                  </tr>
+              `;
+              tablaReportes.innerHTML += fila; // Agrega la fila a la tabla
+          });
+      }catch(error){
+          console.error("Error al cargar los reportes:", error);
+      }
+  }
+  form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      try{
+          const response = await fetch("",{
+              method: "POST",
+              body: formData,
+              headers:{
+                  "X-Requested-With": "XMLHttpRequest",
+              }
+          });
+          const data = await response.json();
+          if(data.status === "ok"){
+              mensaje.innerHTML = `<p style="color: green" > ${data.message} </p>`;
+              form.reset(); // Limpia el formulario
+              cargarReportes(); // Recarga los reportes después de enviar uno nuevo
+          }else{
+              mensaje.innerHTML = `<p style="color: red" > ${JSON.stringify(data.errors)} </p>`;
+          }
+      }catch(error){
+          console.error("Error al enviar el reporte:", error);
+      }
+  });
+  // Carga los reportes al cargar la página
+  cargarReportes();
+</script>
+
+{% endblock contenido %}

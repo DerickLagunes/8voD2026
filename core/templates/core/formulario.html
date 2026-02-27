@@ -1,0 +1,64 @@
+{% extends "base.html" %} 
+{% block contenido %}
+    <h1>Formulario de contacto</h1>
+    <br />
+    <p>Rellena el siguiente formulario.</p>
+    <form id="formulario" method="post">
+        {% csrf_token %} 
+        {% for field in form %}
+            <div class="mb-3">
+                <label>{{ field.label }}</label>
+                {{ field }} 
+                {% if field.errors %}
+                    <div style="color: red">
+                        {{ field.errors|striptags }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="mensaje"></div>
+    {% if success %}
+    <p style="color: green">¡Datos impresos en consola correctamente!</p>
+    {% endif %} 
+
+    <h1>Contactos registrados</h1>
+    <ul>
+    {% for contacto in contactos %}
+      <li>{{ contacto.nombre }} {{ contacto.apellidos }} - {{ contacto.email }} - {{ contacto.mensaje }}</li>
+      {% empty %}
+        <p>No hay contactos registrados.</p>
+    {% endfor %}
+    </ul>
+
+    <script>
+        const form = document.getElementById('formulario');
+        const mensaje = document.getElementById('mensaje');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); # Evita el envio del formulario
+            # FormData es una clase de JavaScript que facilita la recolección de datos de un formulario
+            const formData = new FormData(form);
+            try{
+                # Enviar el formulario usando fetch
+                const response = await fetch("",{
+                    method: "POST",
+                    body: formData,
+                    headers:{
+                        "X-Requested-With": "XMLHttpRequest",  //Indica que es una petición AJAX
+                    }
+                })
+                const data = await response.json(); // Espera la respuesta y la convierte a JSON
+                if(data.status === "ok"){
+                    mensaje.innerHTML = `<p style="color: green" > ${data.message} </p>`; // Muestra el mensaje de éxito
+                    form.reset(); // Limpia el formulario
+                }else{
+                    mensaje.innerHTML = `<p style="color: red" > ${JSON.stringify(data.errors)} </p>`; // Muestra el mensaje de error
+                }
+            }catch(error){
+                console.error("Error al enviar el formulario:", error);
+            }
+        })
+    </script>
+{% endblock %}
